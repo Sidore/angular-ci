@@ -10,13 +10,13 @@ app.use(express.static(__dirname + '/dist'));
 
 app.get('/*', function(req,res) {
 
-    const fs = require('fs');
+//     const fs = require('fs');
 
-res.json({
-    dir : fs.readdirSync(__dirname)
-})
+// res.json({
+//     dir : fs.readdirSync(__dirname)
+// })
 
-// res.sendFile(path.join(__dirname+'/dist/index.html'));
+res.sendFile(path.join(__dirname+'/dist/lesson1/index.html'));
 });
 
 // Start the app by listening on the default Heroku port
